@@ -3,6 +3,7 @@ import os
 from matplotlib import pyplot as plt
 
 from evolution import Evolution
+from gui import GUI
 
 
 class Game:
@@ -101,6 +102,8 @@ def main():
         print("Score: ", score[1])
         print("Win: ", score[0])
         print("==========================================================")
+
+        GUI(best_agent[0], level[1], score, level[0])
 
         fig = plt.gcf()
         fig.canvas.manager.set_window_title(level[0])
